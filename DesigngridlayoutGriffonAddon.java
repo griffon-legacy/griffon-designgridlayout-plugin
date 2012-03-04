@@ -1,5 +1,5 @@
 /*
- * Copyright 2009-2010 the original author or authors.
+ * Copyright 2009-2012 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,16 @@
  * limitations under the License.
  */
 
-import griffon.designgridlayout.factory.DesignGridLayoutFactory
+import griffon.util.ApplicationHolder;
+import griffon.plugins.designgridlayout.factory.DesignGridLayoutFactory;
+import org.codehaus.griffon.runtime.core.AbstractGriffonAddon;
 
 /**
  * @author Andres Almiray
  */
-class DesigngridlayoutGriffonAddon {
-    def factories = [
-        designGridLayout: new DesignGridLayoutFactory()
-    ]
+public class DesigngridlayoutGriffonAddon extends AbstractGriffonAddon {
+    public DesigngridlayoutGriffonAddon() {
+        super(ApplicationHolder.getApplication());
+        factories.put("designGridLayout", new DesignGridLayoutFactory());
+    }
 }

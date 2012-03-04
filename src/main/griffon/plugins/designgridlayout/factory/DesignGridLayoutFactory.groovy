@@ -1,5 +1,5 @@
 /*
- * Copyright 2010 the original author or authors.
+ * Copyright 2010-2012 the original author or authors.
  *
  * Licensed under the Apache License, Version 2.0 (the 'License')
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package griffon.designgridlayout.factory
+package griffon.plugins.designgridlayout.factory
 
 import java.awt.Container
 import groovy.swing.factory.LayoutFactory
@@ -39,7 +39,7 @@ class DesignGridLayoutFactory extends LayoutFactory {
         } else if(builder.current instanceof Container) {
             container = builder.current
         } else {
-            throw new IllegalArgumentException("iIn $name you must nest it inside a Container or specify a Container as value.")
+            throw new IllegalArgumentException("In $name you must nest it inside a Container or specify a Container as value.")
         }
 
         new DesignGridLayout(getLayoutTarget(container))
