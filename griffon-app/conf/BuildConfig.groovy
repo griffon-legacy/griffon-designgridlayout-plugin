@@ -6,7 +6,7 @@ griffon.project.dependency.resolution = {
         mavenRepo 'http://repository.sonatype.org/content/groups/public'
     }
     dependencies {
-        compile('net.java.dev.designgridlayout:designgridlayout:1.9')
+        compile('net.java.dev.designgridlayout:designgridlayout:1.10')
     }
 }
 
